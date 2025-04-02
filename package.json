@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sowjanya-it/Studentnodeapp.git"
+    "url": "git+https://github.com/sowjanya-it/nodeapp.git"
   },
   "keywords": [
     "nodeapp"
@@ -17,9 +17,9 @@
   "author": "sowjanya",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sowjanya-it/Studentnodeapp/issues"
+    "url": "https://github.com/sowjanya-it/nodeapp/issues"
   },
-  "homepage": "https://github.com/sowjanya-it/Studentnodeapp#readme",
+  "homepage": "https://github.com/sowjanya-it/nodeapp#readme",
   "dependencies": {
     "express": "^4.19.2"
   }
