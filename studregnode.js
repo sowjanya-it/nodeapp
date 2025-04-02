@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-
+const port = process.env.PORT || 3000;
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
@@ -27,9 +27,7 @@ app.get('/process_get', function (req, res) {
    res.send(JSON.stringify(response));
 })
 
-   var server = app.listen(8000, function () {
-   var host = server.address().host
-   var port = server.address().port
-   
-   console.log("Example app listening at http://%s:%s", host, port)
+   app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});
 })
