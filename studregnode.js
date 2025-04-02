@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
 
 app.get('/studreg.html', function (req, res) {
    res.sendFile( __dirname + "/" + "studreg.html" );
-})
+});
 
 app.get('/process_get', function (req, res) {
    // Prepare output in JSON format
@@ -25,9 +25,8 @@ app.get('/process_get', function (req, res) {
    };
    console.log(response);
    res.send(JSON.stringify(response));
-})
+});
 
    app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
-})
