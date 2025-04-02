@@ -1,35 +1,38 @@
 pipeline {
     agent any
-
+   
     tools {
-        nodejs "Node-JS"  // Ensure this matches the configured Node.js tool in Jenkins
-    }
-
+        nodejs '23.10.0'
+        }
+   
     stages {
-        stage('Checkout Code') {
+        stage('Clone Repository') {
             steps {
-                git branch: 'master', url: 'https://github.com/drvasavib/Nodejs.git'
+                git branch:'main', url: 'https://github.com/sowjanya-it/nodeapp.git'
             }
         }
-
         stage('Install Dependencies') {
             steps {
                 sh 'npm install'
             }
         }
-
         stage('Run Tests') {
             steps {
                 sh 'npm test'
             }
         }
-
-        stage('Build') {
+        stage('Build Project') {
             steps {
-                sh 'node server.js'
+                 echo 'Project Build Ready'      
+                 }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'npm start'
             }
         }
     }
+}
 
     post {
         success {
