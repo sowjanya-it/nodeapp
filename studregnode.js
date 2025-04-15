@@ -4,7 +4,7 @@ const port = process.env.PORT || 8000;
 app.use(express.static('public'));
 
 app.get('/', function (req, res) {
-   res.sendFile('studreg.html');
+   res.sendFile(__dirname + "/" + "studreg.html");
 });
 
 app.get('/process_get', function (req, res) {
