@@ -3,12 +3,8 @@ var app = express();
 const port = process.env.PORT || 8000;
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-    res.send(' Hello...  Application available at /studreg.html  ');
-});
-
-app.get('/studreg.html', function (req, res) {
-   res.sendFile( __dirname + "/" + "studreg.html" );
+app.get('/', function (req, res) {
+   res.sendFile('studreg.html');
 });
 
 app.get('/process_get', function (req, res) {
